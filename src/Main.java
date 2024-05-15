@@ -14,6 +14,7 @@ public class Main {
             for (MenuItem item : restaurant.getMenuItems()) {
                 System.out.println(item.getName());
                 System.out.println(item.getnutritionalInformation());
+                System.out.println(item.getDescription());
                 System.out.println("$" + item.getPrice());
             }
         } else {
