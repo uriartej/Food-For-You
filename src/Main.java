@@ -15,12 +15,22 @@ public class Main {
             scanner.nextLine();
 
             System.out.println("Menu for " + restaurant.getName() + ":");
+            boolean hasItems = false;
             for (MenuItem item : restaurant.getMenuItems()) {
                 if (isItemMatchingChoice(item, choice)) {
                     System.out.println(item.getName());
                     System.out.println(item.getnutritionalInformation());
                     System.out.println(item.getDescription());
                     System.out.println("$" + item.getPrice());
+                    System.out.println();
+                    hasItems = true;
+                }
+            }
+
+            if (!hasItems) {
+                switch (choice) {
+                    case 1, 2, 3 -> System.out.println("No menu items found.");
+                    default -> System.out.println("Invalid choice.");
                 }
             }
         } else {
@@ -29,15 +39,11 @@ public class Main {
     }
     private static boolean isItemMatchingChoice(MenuItem item, int choice) {
         String description = item.getDescription().toLowerCase();
-        switch (choice) {
-            case 1:
-                return description.contains("healthy") || description.contains("low fat");
-            case 2:
-                return description.contains("weight gain") || description.contains("high calories");
-            case 3:
-                return description.contains("protein");
-            default:
-                return false;
-        }
+        return switch (choice) {
+            case 1 -> description.contains("healthy") || description.contains("low fat");
+            case 2 -> description.contains("weight gain") || description.contains("high calories");
+            case 3 -> description.contains("protein");
+            default -> false;
+        };
     }
 }
