@@ -38,5 +38,6 @@ statement from one to three. The first choice is healthy, second is weight
 gain, and third is protein. All these choices are fetched through the items
 description by using specific words such as healthy, weight gain, protein to
 name a few. If the item description contains any of these words, then the item
-would be displays by the user's choice. 
+would be displays by the user's choice. The next step of this project is to
+create the frontend. 
 
