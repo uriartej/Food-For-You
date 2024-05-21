@@ -1,7 +1,7 @@
 # Food Choices For You
 This project will help the user choose on what fast food they would want to eat by choosing
-a set of options. The set of options includes healthy, weight gainer, or protein based. If 
-the user is feeling healthy, the user would have to enable healthy mode which will help the 
+a set of options. The set of options includes healthy, weight gain, or protein. For example,
+if the user is feeling healthy, the user would have to choose healthy mode which will help the 
 user eat a healthy related item. 
 
 ## Prerequisites
@@ -30,4 +30,13 @@ Java JDK 1.8 or higher
 So far the programs allows the user to input a restaurant, the program
 then outputs the list of fast food items from the specific restaurant.
 If restaurant is not in the list, it will display "Restaurant Not Found."
+
+Update:
+I added a boolean method named isItemMatchingChoice that takes parameters
+of the item, and the choice. The choices are utlized by using a switch 
+statement from one to three. The first choice is healthy, second is weight
+gain, and third is protein. All these choices are fetched through the items
+description by using specific words such as healthy, weight gain, protein to
+name a few. If the item description contains any of these words, then the item
+would be displays by the user's choice. 
 
