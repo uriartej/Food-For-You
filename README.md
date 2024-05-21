@@ -7,7 +7,7 @@ user eat a healthy related item.
 ## Prerequisites
 Java JDK 1.8 or higher
 
-### Installing for macOS and Linux
+### Installation for macOS and Linux
 1. Clone the project repository:
    git clone https://github.com/uriartej/Food-For-You.git
 2. Navigate to the project directory: 
@@ -16,7 +16,7 @@ Java JDK 1.8 or higher
    javac -d out/production/Food\ Choices\ For\ You src/*.java
 4. Run the application:
    java -cp out/production/Food\ Choices\ For\ You Main
-### Installing for Windows
+### Installation for Windows
 1. Clone the project repository:
    git clone https://github.com/uriartej/Food-For-You.git
 2. Navigate to the project directory:
