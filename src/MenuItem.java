@@ -1,8 +1,8 @@
 public class MenuItem {
-    private String name;
-    private double price;
-    private String description;
-    private String nutritionalInformation;
+    private final String name;
+    private final double price;
+    private final String description;
+    private final String nutritionalInformation;
 
     public MenuItem(String name, double price, String description, String nutritionalInformation) {
         this.name = name;
