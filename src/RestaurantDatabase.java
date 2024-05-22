@@ -3,7 +3,7 @@ import java.util.List;
 
 public class RestaurantDatabase {
 
-    private List<Restaurant> restaurants = new ArrayList<>();
+    private final List<Restaurant> restaurants = new ArrayList<>();
 
     public RestaurantDatabase() {
         Restaurant PizzaHut = new Restaurant("Pizza Hut");
