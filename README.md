@@ -5,7 +5,7 @@ if the user is feeling healthy, the user would have to choose healthy mode which
 user eat a healthy related item. 
 
 ## Prerequisites
-Java JDK 8 or higher
+Java JDK 17.0.10 or higher
 
 ### Installation for macOS and Linux
 1. Clone the project repository:
