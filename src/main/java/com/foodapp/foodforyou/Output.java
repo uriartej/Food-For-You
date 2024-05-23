@@ -2,7 +2,7 @@ package com.foodapp.foodforyou;
 
 import java.util.Scanner;
 
-public class Main {
+public class Output {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         RestaurantDatabase database = new RestaurantDatabase();
