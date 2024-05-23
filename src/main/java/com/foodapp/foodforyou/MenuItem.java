@@ -1,4 +1,4 @@
-package java;
+package com.foodapp.foodforyou;
 
 public class MenuItem {
     private final String name;
