@@ -41,3 +41,7 @@ name a few. If the item description contains any of these words, then the item
 would be displays by the user's choice. The next step of this project is to
 create the frontend. 
 
+Update:
+Recorganized the files into one package. The name of the package is com.foodapp.
+foodforyou. All files have the same package. Renamed Main.java to Output.java.
+
