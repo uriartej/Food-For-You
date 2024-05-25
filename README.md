@@ -5,7 +5,9 @@ if the user is feeling healthy, the user would have to choose healthy mode which
 user eat a healthy related item. 
 
 ## Prerequisites
-Java JDK 17.0.10 or higher
+* Java JDK 17.0.10 or higher
+* Maven
+* Spring Boot
 
 ### Installation for macOS and Linux
 1. Clone the project repository:
@@ -27,21 +29,26 @@ Java JDK 17.0.10 or higher
    java -cp out\production\Food Choices For You Main
 
 ### Current Progress
-So far the programs allows the user to input a restaurant, the program
-then outputs the list of fast food items from the specific restaurant.
-If restaurant is not in the list, it will display "Restaurant Not Found."
+So far the programs allows the user to input a restaurant, the program then outputs the list
+of fast food items from the specific restaurant. If restaurant is not in the list, it will 
+display "Restaurant Not Found."
 
-Update:
-I added a boolean method named isItemMatchingChoice that takes parameters
-of the item, and the choice. The choices are utlized by using a switch 
-statement from one to three. The first choice is healthy, second is weight
-gain, and third is protein. All these choices are fetched through the items
-description by using specific words such as healthy, weight gain, protein to
-name a few. If the item description contains any of these words, then the item
-would be displays by the user's choice. The next step of this project is to
-create the frontend. 
+_**Update**_:
+I added a boolean method named isItemMatchingChoice that takes parameters of the item, and the
+choice. The choices are utlized by using a switch statement from one to three. The first choice
+is healthy, second is weight gain, and third is protein. All these choices are fetched through
+the items description by using specific words such as healthy, weight gain, protein to name a few.
+If the item description contains any of these words, then the item would be displays by the user's
+choice. The next step of this project is to create the frontend. 
 
-Update:
-Recorganized the files into one package. The name of the package is com.foodapp.
-foodforyou. All files have the same package. Renamed Main.java to Output.java.
+_**Update**_:
+Recorganized the files into one package. The name of the package is com.foodapp.foodforyou. All 
+files have the same package. Renamed Main.java to Output.java.
 
+_**Update**_: 
+Added more options for the user to choose from such as _view restuarant_, _add__restaurant_, _update 
+restaurant_, _delete restaurant_, _add menu item_ and _remove menu item_ by editing Output.java file.
+I edited RestaurantDatabase.java file by adding methods to support the user to choose more options. 
+Also, added a database intilization method. I began setting up the development environment by choosing
+Maven as my build tool. Created a pom.xml file with the neccessary dependancies to start on the backend 
+using Spring Boot. 
