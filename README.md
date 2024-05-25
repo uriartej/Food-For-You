@@ -2,10 +2,12 @@
 This project will help the user choose on what fast food they would want to eat by choosing
 a set of options. The set of options includes healthy, weight gain, or protein. For example,
 if the user is feeling healthy, the user would have to choose healthy mode which will help the 
-user eat a healthy related item. 
+user eat a healthy related item. The user will also have flexibility by incorporating a variety
+of choices. The following choices are _view restaurant menu_, _add restaurant_, _update restaurant_,
+_delete restaurant_, _add menu item_, and _remove menu item_. 
 
 ## Prerequisites
-* Java JDK 17.0.10 or higher
+* Java JDK 17 or higher
 * Maven
 * Spring Boot
 
