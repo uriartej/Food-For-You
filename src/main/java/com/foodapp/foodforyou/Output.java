@@ -11,7 +11,7 @@ public class Output {
         while (true) {
             System.out.println("Food Choices For You");
             System.out.println("Please choose an option:");
-            System.out.println("1. View Restaurants");
+            System.out.println("1. View Restaurant");
             System.out.println("2. Add Restaurant");
             System.out.println("3. Update Restaurant");
             System.out.println("4. Delete Restaurant");
