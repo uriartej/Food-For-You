@@ -54,3 +54,10 @@ I edited RestaurantDatabase.java file by adding methods to support the user to c
 Also, added a database intilization method. I began setting up the development environment by choosing
 Maven as my build tool. Created a pom.xml file with the neccessary dependancies to start on the backend 
 using Spring Boot. 
+
+_**Update**_:
+Started on the backend. The first file created is FoodForYouApplication where it would handle the 
+start-up application process for the project. Then I created RestaurantController to handle HTTP requests
+and preform CRUD operations on restaurants and menu items. The controller methods are @GetMapping, @Post
+Mapping, @PutMapping, and @DeleteMapping. The methods also return HTTP statuses. 
+
