@@ -1,8 +1,11 @@
 package com.foodapp.foodforyou;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class RestaurantDatabase {
 
     private final List<Restaurant> restaurants = new ArrayList<>();
