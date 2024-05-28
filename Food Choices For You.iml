@@ -2,8 +2,16 @@
 <module type="JAVA_MODULE" version="4">
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/test/java" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/test/java/com" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/test/java/com/foodapp" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/test/java/com/foodapp/foodforyou" />
     </content>
   </component>
 </module>
