@@ -1,2 +1,28 @@
-package com.foodapp.foodforyou;public class RestaurantDatabaseTest {
+package com.foodapp.foodforyou;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import org.junit.jupiter.api.Test;
+
+public class RestaurantDatabaseTest {
+
+    @Test
+    public void testAddRestaurant() {
+        RestaurantDatabase database = new RestaurantDatabase();
+        Restaurant restaurant = new Restaurant("Test Restaurant");
+        database.addRestaurant(restaurant);
+
+        assertEquals(restaurant, database.getRestaurantByName("Test Restaurant"));
+    }
+
+    @Test
+    public void testDeleteRestaurant() {
+        RestaurantDatabase database = new RestaurantDatabase();
+        Restaurant restaurant = new Restaurant("Test Restaurant");
+        database.addRestaurant(restaurant);
+        database.deleteRestaurant("Test Restaurant");
+
+        assertNull(database.getRestaurantByName("Test Restaurant"));
+    }
 }
