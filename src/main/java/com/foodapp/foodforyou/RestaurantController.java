@@ -4,6 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/restaurants")
 public class RestaurantController {
@@ -12,6 +14,12 @@ public class RestaurantController {
 
     public RestaurantController(RestaurantDatabase database) {
         this.database = database;
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Restaurant>> getAllRestaurants() {
+        List<Restaurant> restaurants = database.getAllRestaurants();
+        return new ResponseEntity<>(restaurants, HttpStatus.OK);
     }
 
     @GetMapping("/{name}")
