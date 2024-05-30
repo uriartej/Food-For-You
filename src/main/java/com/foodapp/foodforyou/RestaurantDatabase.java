@@ -14,6 +14,10 @@ public class RestaurantDatabase {
         initializeDatabase();
     }
 
+    public List<Restaurant> getAllRestaurants() {
+        return restaurants;
+    }
+
     private void initializeDatabase() {
         Restaurant PizzaHut = new Restaurant("Pizza Hut");
         PizzaHut.addMenuItem(new MenuItem("Medium Peperoni Pizza", 17.38, "One medium pizza" +
