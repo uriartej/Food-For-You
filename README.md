@@ -6,10 +6,38 @@ user eat a healthy related item. The user will also have flexibility by incorpor
 of choices. The following choices are _view restaurant menu_, _add restaurant_, _update restaurant_,
 _delete restaurant_, _add menu item_, and _remove menu item_. 
 
-## Prerequisites
-* Java JDK 17 or higher
-* Maven
-* Spring Boot
+## Resources and Dependencies
+
+### Programming Language
+- **Java** (version 18)
+
+### Frameworks and Libraries
+1. **Spring Boot** (version 2.7.0)
+   - Spring Boot Start Web
+   - Spring Boot Starter Data JPA
+
+2. **Database**
+   - H2 Database (version 2.1.214)
+
+3. **Utilities**
+   - Lombok (version 1.18.24)
+
+4. **Testing Frameworks**
+   - Spring Boot Starter Test (version 2.7.0)
+   - JUnit Jupiter API (version 5.8.2)
+   - JUnit Jupiter Engine (version 5.8.2)
+   - Mockito Core (version 4.5.1)
+   - Mockito JUnit Jupiter (version 4.5.1)
+
+5. **XML Binding**
+   - JAXB API (verison 2.3.1)
+   - JAXB Runtime (version 2.3.1)
+
+### Plugins
+   - Spring Boot Maven Plugin (version 2.7.0)
+   - Maven Compiler Plugin (version 3.8.1)
+
+## Installation Procedures
 
 ### Installation for macOS and Linux
 1. Clone the project repository:
@@ -30,7 +58,7 @@ _delete restaurant_, _add menu item_, and _remove menu item_.
 4. Run the application:
    java -cp out\production\Food Choices For You Main
 
-### Current Progress
+## Current Progress
 So far the programs allows the user to input a restaurant, the program then outputs the list
 of fast food items from the specific restaurant. If restaurant is not in the list, it will 
 display "Restaurant Not Found."
@@ -41,7 +69,7 @@ choice. The choices are utlized by using a switch statement from one to three. T
 is healthy, second is weight gain, and third is protein. All these choices are fetched through
 the items description by using specific words such as healthy, weight gain, protein to name a few.
 If the item description contains any of these words, then the item would be displays by the user's
-choice. The next step of this project is to create the frontend. 
+choice. The next step of this project is to create the frontend.
 
 _**Update**_:
 Recorganized the files into one package. The name of the package is com.foodapp.foodforyou. All 
@@ -60,4 +88,12 @@ Started on the backend. The first file created is FoodForYouApplication where it
 start-up application process for the project. Then I created RestaurantController to handle HTTP requests
 and preform CRUD operations on restaurants and menu items. The controller methods are @GetMapping, @Post
 Mapping, @PutMapping, and @DeleteMapping. The methods also return HTTP statuses. 
+
+_**Update**_:
+Created a test folder that contains RestaurantControllerTest, RestaurantDatabaseTest, and RestaurantTest java
+files. Each of these folders are for automated testing. All test cases passed. Incorporated Maven into 
+the project with the dependencies shown above. All test cases passed. Throughout having test cases passed, I 
+was having trouble having test cases passed through individual methods due to having my test folder labled as
+a source folder. I was able to solve this by focusing my attention to the IDE because it's where my test cases
+were failing rather than using the terminal using Maven.
 
