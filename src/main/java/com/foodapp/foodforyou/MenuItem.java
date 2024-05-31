@@ -28,4 +28,5 @@ public class MenuItem {
     public String getnutritionalInformation() {
         return nutritionalInformation;
     }
+
 }
