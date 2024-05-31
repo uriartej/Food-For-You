@@ -1,6 +1,7 @@
 package com.foodapp.foodforyou;
 
 import java.sql.SQLOutput;
+import java.util.List;
 import java.util.Scanner;
 
 public class Output {
@@ -11,7 +12,7 @@ public class Output {
         while (true) {
             System.out.println("Food Choices For You");
             System.out.println("Please choose an option:");
-            System.out.println("1. View Restaurant");
+            System.out.println("1. View Restaurants");
             System.out.println("2. Add Restaurant");
             System.out.println("3. Update Restaurant");
             System.out.println("4. Delete Restaurant");
@@ -38,6 +39,11 @@ public class Output {
     }
 
     private static void viewRestaurantMenu(Scanner scanner, RestaurantDatabase database) {
+        List<Restaurant> restaurants = database.getAllRestaurants();
+        for (Restaurant restaurant : restaurants) {
+            System.out.println(restaurant.getName());
+        }
+
         System.out.println("Enter restaurant");
         String restaurantName = scanner.nextLine();
 
