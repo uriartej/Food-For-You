@@ -97,3 +97,6 @@ was having trouble having test cases passed through individual methods due to ha
 a source folder. I was able to solve this by focusing my attention to the IDE because it's where my test cases
 were failing rather than using the terminal using Maven.
 
+
+![Screenshot from 2024-05-31 10-34-51](https://github.com/uriartej/Food-For-You/assets/99374424/b0f80504-40dd-4761-b6f1-0c87585b79ab)
+
