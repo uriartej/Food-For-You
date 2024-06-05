@@ -97,8 +97,13 @@ was having trouble having test cases passed through individual methods due to ha
 a source folder. I was able to solve this by focusing my attention to the IDE because it's where my test cases
 were failing rather than using the terminal using Maven.
 
+_**Update**_:
+Ran mvn spring-boot:run on terminal and recieved a list of restaurants for http://localhost:8080/restaurants.
+Will check the rest of the api endpoints and make sure they are working properly.
+
 
 ![Screenshot from 2024-05-31 10-34-51](https://github.com/uriartej/Food-For-You/assets/99374424/b0f80504-40dd-4761-b6f1-0c87585b79ab)
 ![Screenshot from 2024-06-03 18-20-21](https://github.com/uriartej/Food-For-You/assets/99374424/94a10cc8-f734-4e63-b0a7-7b48fc1144ef)
+![Screenshot from 2024-06-04 17-17-22](https://github.com/uriartej/Food-For-You/assets/99374424/a8017565-a19c-4b0f-8c65-a5320fed1e22)
 
 
