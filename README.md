@@ -122,6 +122,13 @@ on my source folder in the file RestaurantController.java file.
    7. Remove a menu item from a restaurant
       - Endpoint: DELETE /restaurants/{restaurantName}/menu
       - Description: Removes a menu item from a restaurant
+   The endpoints that were tested in the RestaurantControllerTest are
+      - Endpoint: GET /restaurants/{name}
+      - Test Method: 'getRestaurantByName_shouldReturnOk'
+      - Description: Returns '200 OK' when a restaurant exisits.
+      - Test Method: 'getRestaurantByName_ShouldReturnNotFound'
+      - Description: Returns '404 NOT FOUND' if restaurant doesn't exist.
+   In RestaurantTest and RestaurantTest files, future endpoints will go here. 
 
 ![Screenshot from 2024-05-31 10-34-51](https://github.com/uriartej/Food-For-You/assets/99374424/b0f80504-40dd-4761-b6f1-0c87585b79ab)
 ![Screenshot from 2024-06-03 18-20-21](https://github.com/uriartej/Food-For-You/assets/99374424/94a10cc8-f734-4e63-b0a7-7b48fc1144ef)
