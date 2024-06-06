@@ -99,11 +99,33 @@ were failing rather than using the terminal using Maven.
 
 _**Update**_:
 Ran mvn spring-boot:run on terminal and recieved a list of restaurants for http://localhost:8080/restaurants.
-Will check the rest of the api endpoints and make sure they are working properly.
-
+Will check the rest of the api endpoints and make sure they are working properly. Checked the api endpoints located
+on my source folder in the file RestaurantController.java file. 
+   1. Get all restaurants
+      - Endpoint: GET /restaurants
+      - Description Gets a list of restaurants
+   2. Get restaurant by name
+      - Endpoint: GET /restaurants/{name}
+      - Description: Gets a restaurant by its name
+   3. Add a new restaurant
+      - Endpoint: POST /restaurants
+      - Description: Adds a new restaurant
+   4. Update existing restaurant
+      - Endpoint: PUT /restaurants/{name}
+      - Description: Updated existing restaurant by its name
+   5. Delete a restaurant
+      - Endpoint: DELETE /restaurants/{name}
+      - Description: Deletes a restaurant by its name
+   6. Add a menu item to a restaurant
+      - Endpoint: POST /restaurants/{restaurantName}/menu
+      - Description: Adds a menu item to a restaurant
+   7. Remove a menu item from a restaurant
+      - Endpoint: DELETE /restaurants/{restaurantName}/menu
+      - Description: Removes a menu item from a restaurant
 
 ![Screenshot from 2024-05-31 10-34-51](https://github.com/uriartej/Food-For-You/assets/99374424/b0f80504-40dd-4761-b6f1-0c87585b79ab)
 ![Screenshot from 2024-06-03 18-20-21](https://github.com/uriartej/Food-For-You/assets/99374424/94a10cc8-f734-4e63-b0a7-7b48fc1144ef)
 ![Screenshot from 2024-06-04 17-17-22](https://github.com/uriartej/Food-For-You/assets/99374424/a8017565-a19c-4b0f-8c65-a5320fed1e22)
+![Screenshot from 2024-06-05 18-33-19](https://github.com/uriartej/Food-For-You/assets/99374424/b40cab35-da4d-46df-9f6f-df3e61fc1a11)
 
 
