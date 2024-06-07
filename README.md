@@ -90,7 +90,7 @@ and preform CRUD operations on restaurants and menu items. The controller method
 Mapping, @PutMapping, and @DeleteMapping. The methods also return HTTP statuses. 
 
 _**Update**_:
-Created a test folder that contains RestaurantControllerTest, RestaurantDatabaseTest, and RestaurantTest java
+Created a test folder that contains _RestaurantControllerTest_, _RestaurantDatabaseTest_, and _RestaurantTest_ java
 files. Each of these folders are for automated testing. All test cases passed. Incorporated Maven into 
 the project with the dependencies shown above. All test cases passed. Throughout having test cases passed, I 
 was having trouble having test cases passed through individual methods due to having my test folder labled as
@@ -98,32 +98,32 @@ a source folder. I was able to solve this by focusing my attention to the IDE be
 were failing rather than using the terminal using Maven.
 
 _**Update**_:
-Ran mvn spring-boot:run on terminal and recieved a list of restaurants for http://localhost:8080/restaurants.
+Ran _**mvn spring-boot:run**_ on terminal and recieved a list of restaurants for [http://localhost:8080/restaurants].
 Will check the rest of the api endpoints and make sure they are working properly. Checked the api endpoints located
-on my source folder in the file RestaurantController.java file. 
+on my source folder in the file _RestaurantController.java_ file. 
    1. Get all restaurants
-      - Endpoint: GET /restaurants
+      - Endpoint: GET _**/restaurants**_
       - Description Gets a list of restaurants
    2. Get restaurant by name
-      - Endpoint: GET /restaurants/{name}
+      - Endpoint: GET **_/restaurants/{name}_**
       - Description: Gets a restaurant by its name
    3. Add a new restaurant
-      - Endpoint: POST /restaurants
+      - Endpoint: POST **_/restaurants_**
       - Description: Adds a new restaurant
    4. Update existing restaurant
-      - Endpoint: PUT /restaurants/{name}
+      - Endpoint: PUT **_/restaurants/{name}_**
       - Description: Updated existing restaurant by its name
    5. Delete a restaurant
-      - Endpoint: DELETE /restaurants/{name}
+      - Endpoint: DELETE **_/restaurants/{name}_**
       - Description: Deletes a restaurant by its name
    6. Add a menu item to a restaurant
-      - Endpoint: POST /restaurants/{restaurantName}/menu
+      - Endpoint: POST **_/restaurants/{restaurantName}/menu_**
       - Description: Adds a menu item to a restaurant
    7. Remove a menu item from a restaurant
-      - Endpoint: DELETE /restaurants/{restaurantName}/menu
+      - Endpoint: DELETE **_/restaurants/{restaurantName}/menu_**
       - Description: Removes a menu item from a restaurant
    The endpoints that were tested in the RestaurantControllerTest are
-      - Endpoint: GET /restaurants/{name}
+      - Endpoint: GET **_/restaurants/{name}_**
       - Test Method: 'getRestaurantByName_shouldReturnOk'
       - Description: Returns '200 OK' when a restaurant exisits.
       - Test Method: 'getRestaurantByName_ShouldReturnNotFound'
