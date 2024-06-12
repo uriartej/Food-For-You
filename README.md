@@ -38,8 +38,9 @@ _delete restaurant_, _add menu item_, and _remove menu item_.
 6. **FrontEnd**
     - NodeJS (version v18.20.3)
     - NPM (version 10.7.0) 
-    - Axios
-    - React
+    - Axios (version 1.7.2)
+    - React (version 18.3.1)
+    - Bootstrap (version 5.3.3)
 
 ### Plugins
    - Spring Boot Maven Plugin (version 2.7.0)
