@@ -8,8 +8,10 @@ _delete restaurant_, _add menu item_, and _remove menu item_.
 
 ## Resources and Dependencies
 
-### Programming Language
+### Programming Languages
 - **Java** (version 18)
+- **JavaScript**
+- **CSS**
 
 ### Frameworks and Libraries
 1. **Spring Boot** (version 2.7.0)
@@ -34,8 +36,10 @@ _delete restaurant_, _add menu item_, and _remove menu item_.
    - JAXB Runtime (version 2.3.1)
 
 6. **FrontEnd**
-    - NodeJS (version v14.21.3)
-    - NPM (version 8.5.1) 
+    - NodeJS (version v18.20.3)
+    - NPM (version 10.7.0) 
+    - Axios
+    - React
 
 ### Plugins
    - Spring Boot Maven Plugin (version 2.7.0)
