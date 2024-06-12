@@ -34,7 +34,7 @@ _delete restaurant_, _add menu item_, and _remove menu item_.
    - JAXB Runtime (version 2.3.1)
 
 6. **FrontEnd**
-    - NodeJS (version v12.22.9)
+    - NodeJS (version v14.21.3)
     - NPM (version 8.5.1) 
 
 ### Plugins
