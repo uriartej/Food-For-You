@@ -137,6 +137,10 @@ on my source folder in the file _RestaurantController.java_ file.
       - Description: Returns '200 OK' when a restaurant exisits.
       - Test Method: 'getRestaurantByName_ShouldReturnNotFound'
       - Description: Returns '404 NOT FOUND' if restaurant doesn't exist.
+   
+   _**Update**__:
+   Started on frontend of the project. I will be using React, Javascript and CSS. Ran npm start with axios and was
+   able to compile sucessfully. 
 
 ![Screenshot from 2024-05-31 10-34-51](https://github.com/uriartej/Food-For-You/assets/99374424/b0f80504-40dd-4761-b6f1-0c87585b79ab)
 ![Screenshot from 2024-06-03 18-20-21](https://github.com/uriartej/Food-For-You/assets/99374424/94a10cc8-f734-4e63-b0a7-7b48fc1144ef)
