@@ -146,5 +146,6 @@ on my source folder in the file _RestaurantController.java_ file.
 ![Screenshot from 2024-06-03 18-20-21](https://github.com/uriartej/Food-For-You/assets/99374424/94a10cc8-f734-4e63-b0a7-7b48fc1144ef)
 ![Screenshot from 2024-06-04 17-17-22](https://github.com/uriartej/Food-For-You/assets/99374424/a8017565-a19c-4b0f-8c65-a5320fed1e22)
 ![Screenshot from 2024-06-05 18-33-19](https://github.com/uriartej/Food-For-You/assets/99374424/b40cab35-da4d-46df-9f6f-df3e61fc1a11)
+![Screenshot from 2024-06-13 15-53-11](https://github.com/uriartej/Food-For-You/assets/99374424/9e781f51-d034-4ccf-a94e-43ada6121072)
 
 
