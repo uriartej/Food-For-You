@@ -1,7 +1,6 @@
-// src/App.js
 import React from 'react';
 import './App.css';
-import Restaurants from './Restaurants';
+import RestaurantList from './RestaurantList';
 
 function App() {
     return (
@@ -9,7 +8,7 @@ function App() {
             <header className="App-header">
                 <h1>Food Choices For You</h1>
             </header>
-            <Restaurants />
+            <RestaurantList />
         </div>
     );
 }
