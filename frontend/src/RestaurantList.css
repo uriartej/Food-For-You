@@ -1,0 +1,39 @@
+.Restaurant {
+    margin-bottom: 2rem;
+}
+
+.Restaurant h2 {
+    color: #e8230d;
+    font-size: 2.0rem;
+    margin-bottom: 0.5rem;
+}
+
+.Menu-Item {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Menu-Item h3 {
+    font-size: 1.0rem;
+    margin-bottom: 0.3rem;
+}
+
+.Menu-Item p {
+    margin: 4;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.pagination li {
+    display: inline;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination li.active {
+    font-weight: bold;
+}
