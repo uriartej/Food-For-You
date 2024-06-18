@@ -142,6 +142,11 @@ on my source folder in the file _RestaurantController.java_ file.
    Started on frontend of the project. I will be using React, Javascript and CSS. Ran npm start with axios and was
    able to compile sucessfully. 
 
+   _**Update**__:
+   Began working on the UI of the website and was able to have a list of restaurants displayed on the home page.
+   It also includes a search bar to search for the list of restaurants displayed on the home page. Was having difficuly 
+   on creating the frontend because I didnt realize I had to have Spring running simultaneoulsy. I might make changes to the UI and add pictures of the items.  
+
 ![Screenshot from 2024-05-31 10-34-51](https://github.com/uriartej/Food-For-You/assets/99374424/b0f80504-40dd-4761-b6f1-0c87585b79ab)
 ![Screenshot from 2024-06-03 18-20-21](https://github.com/uriartej/Food-For-You/assets/99374424/94a10cc8-f734-4e63-b0a7-7b48fc1144ef)
 ![Screenshot from 2024-06-04 17-17-22](https://github.com/uriartej/Food-For-You/assets/99374424/a8017565-a19c-4b0f-8c65-a5320fed1e22)
