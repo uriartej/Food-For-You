@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+// src/RestaurantList.js
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './RestaurantList.css';
 
 function RestaurantList() {
     const [restaurants, setRestaurants] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         axios.get('http://localhost:8080/restaurants')
@@ -14,26 +17,30 @@ function RestaurantList() {
             });
     }, []);
 
+    const filteredRestaurants = restaurants.filter(restaurant =>
+        restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
-        <div>
+        <div className="RestaurantList">
             <h2>Restaurants</h2>
-            <ul>
-                {restaurants.map((restaurant, index) => (
-                    <li key={index}>
-                        <h3>{restaurant.name}</h3>
-                        <ul>
-                            {restaurant.menuItems.map((item, idx) => (
-                                <li key={idx}>
-                                    <p>{item.name}</p>
-                                    <p>{item.price}</p>
-                                    <p>{item.description}</p>
-                                    <p>{item.nutritionalInformation}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </li>
-                ))}
-            </ul>
+            <input
+                type="text"
+                placeholder="Search restaurants..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="SearchBar"
+            />
+            {filteredRestaurants.map((restaurant, index) => (
+                <div key={index} className="Restaurant">
+                    <h3>{restaurant.name}</h3>
+                    {restaurant.menuItems.map((item, idx) => (
+                        <div key={idx} className="MenuItem">
+                            <strong>{item.name}</strong>: {item.price} - {item.description} ({item.nutritionalInformation})
+                        </div>
+                    ))}
+                </div>
+            ))}
         </div>
     );
 }
