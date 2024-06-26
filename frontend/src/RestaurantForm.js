@@ -1,67 +1,86 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './RestaurantForm.css';
 
-function RestaurantForm() {
+const RestaurantForm = () => {
     const [name, setName] = useState('');
-    const [menuItems, setMenuItems] = useState([]);
     const [menuItem, setMenuItem] = useState({ name: '', price: '', description: '', nutritionalInformation: '' });
+    const [restaurantToUpdate, setRestaurantToUpdate] = useState('');
+    const [restaurantToDelete, setRestaurantToDelete] = useState('');
 
-    const addMenuItem = () => {
-        setMenuItems([...menuItems, menuItem]);
-        setMenuItem({ name: '', price: '', description: '', nutritionalInformation: '' });
+    const handleAddRestaurant = () => {
+        axios.post('http://localhost:8080/restaurants', { name })
+            .then(() => {
+                setName('');
+            })
+            .catch(error => console.error('Error adding restaurant:', error));
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const restaurant = { name, menuItems };
-        axios.post('http://localhost:8080/restaurants', restaurant)
-            .then(response => {
-                console.log('Restaurant added:', response.data);
-
+    const handleUpdateRestaurant = () => {
+        axios.put(`http://localhost:8080/restaurants/${restaurantToUpdate}`, { name })
+            .then(() => {
+                setRestaurantToUpdate('');
+                setName('');
             })
-            .catch(error => {
-                console.error('There was an error adding the restaurant:', error);
-            });
+            .catch(error => console.error('Error updating restaurant:', error));
+    };
+
+    const handleDeleteRestaurant = () => {
+        axios.delete(`http://localhost:8080/restaurants/${restaurantToDelete}`)
+            .then(() => {
+                setRestaurantToDelete('');
+            })
+            .catch(error => console.error('Error deleting restaurant:', error));
+    };
+
+    const handleAddMenuItem = () => {
+        axios.post(`http://localhost:8080/restaurants/${name}/menu`, menuItem)
+            .then(() => {
+                setMenuItem({ name: '', price: '', description: '', nutritionalInformation: '' });
+            })
+            .catch(error => console.error('Error adding menu item:', error));
     };
 
     return (
-        <div className="form-container">
+        <div>
             <h2>Add Restaurant</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label>Name:</label>
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-                </div>
+            <div>
+                <label>Name:
+                    <input type="text" value={name} onChange={e => setName(e.target.value)} />
+                </label>
+            </div>
+            <div>
                 <h3>Menu Items</h3>
-                {menuItems.map((item, index) => (
-                    <div key={index} className="form-group">
-                        <strong>{item.name}</strong>: {item.price} - {item.description} ({item.nutritionalInformation})
-                    </div>
-                ))}
-                <div className="form-group">
-                    <label>Item Name:</label>
-                    <input type="text" value={menuItem.name} onChange={(e) => setMenuItem({ ...menuItem, name: e.target.value })} required />
-                </div>
-                <div className="form-group">
-                    <label>Price:</label>
-                    <input type="text" value={menuItem.price} onChange={(e) => setMenuItem({ ...menuItem, price: e.target.value })} required />
-                </div>
-                <div className="form-group">
-                    <label>Description:</label>
-                    <input type="text" value={menuItem.description} onChange={(e) => setMenuItem({ ...menuItem, description: e.target.value })} required />
-                </div>
-                <div className="form-group">
-                    <label>Nutritional Information:</label>
-                    <input type="text" value={menuItem.nutritionalInformation} onChange={(e) => setMenuItem({ ...menuItem, nutritionalInformation: e.target.value })} required />
-                </div>
-                <div className="button-group">
-                    <button type="button" onClick={addMenuItem}>Add Menu Item</button>
-                    <button type="submit">Add Restaurant</button>
-                </div>
-            </form>
+                <label>Item Name:
+                    <input type="text" value={menuItem.name} onChange={e => setMenuItem({ ...menuItem, name: e.target.value })} />
+                </label>
+                <label>Price:
+                    <input type="text" value={menuItem.price} onChange={e => setMenuItem({ ...menuItem, price: e.target.value })} />
+                </label>
+                <label>Description:
+                    <input type="text" value={menuItem.description} onChange={e => setMenuItem({ ...menuItem, description: e.target.value })} />
+                </label>
+                <label>Nutritional Information:
+                    <input type="text" value={menuItem.nutritionalInformation} onChange={e => setMenuItem({ ...menuItem, nutritionalInformation: e.target.value })} />
+                </label>
+            </div>
+            <button onClick={handleAddMenuItem}>Add Menu Item</button>
+            <button onClick={handleAddRestaurant}>Add Restaurant</button>
+            <div>
+                <h2>Update Restaurant</h2>
+                <label>Restaurant to Update:
+                    <input type="text" value={restaurantToUpdate} onChange={e => setRestaurantToUpdate(e.target.value)} />
+                </label>
+                <button onClick={handleUpdateRestaurant}>Update Restaurant</button>
+            </div>
+            <div>
+                <h2>Delete Restaurant</h2>
+                <label>Restaurant to Delete:
+                    <input type="text" value={restaurantToDelete} onChange={e => setRestaurantToDelete(e.target.value)} />
+                </label>
+                <button onClick={handleDeleteRestaurant}>Delete Restaurant</button>
+            </div>
         </div>
     );
-}
+};
 
 export default RestaurantForm;
