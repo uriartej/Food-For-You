@@ -1,48 +1,40 @@
-// src/RestaurantList.js
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import './RestaurantList.css';
 
-function RestaurantList() {
-    const [restaurants, setRestaurants] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
-
-    useEffect(() => {
-        axios.get('http://localhost:8080/restaurants')
-            .then(response => {
-                setRestaurants(response.data);
-            })
-            .catch(error => {
-                console.error('There was an error fetching the restaurants!', error);
-            });
-    }, []);
+const RestaurantList = ({ searchTerm, filterChoice, restaurants }) => {
+    const filterItems = (items) => {
+        return items.filter(item => {
+            const description = item.description.toLowerCase();
+            if (!filterChoice || filterChoice === 'all') return true; 
+            if (filterChoice === 'healthy') return description.includes('healthy') || description.includes('low fat');
+            if (filterChoice === 'weight gain') return description.includes('weight gain') || description.includes('high calories');
+            if (filterChoice === 'protein') return description.includes('protein');
+            return false;
+        });
+    };
 
     const filteredRestaurants = restaurants.filter(restaurant =>
         restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     return (
-        <div className="RestaurantList">
+        <div className="restaurant-list">
             <h2>Restaurants</h2>
-            <input
-                type="text"
-                placeholder="Search restaurants..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="SearchBar"
-            />
-            {filteredRestaurants.map((restaurant, index) => (
-                <div key={index} className="Restaurant">
+            {filteredRestaurants.map(restaurant => (
+                <div key={restaurant.name} className="restaurant">
                     <h3>{restaurant.name}</h3>
-                    {restaurant.menuItems.map((item, idx) => (
-                        <div key={idx} className="MenuItem">
-                            <strong>{item.name}</strong>: {item.price} - {item.description} ({item.nutritionalInformation})
+                    {filterItems(restaurant.menuItems).map(item => (
+                        <div key={item.name} className="menu-item">
+                            <p>{item.name}</p>
+                            <p>{item.price}</p>
+                            <p>{item.description}</p>
+                            <p>{item.nutritionalInformation}</p>
                         </div>
                     ))}
                 </div>
             ))}
         </div>
     );
-}
+};
 
 export default RestaurantList;
