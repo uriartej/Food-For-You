@@ -6,6 +6,8 @@ user eat a healthy related item. The user will also have flexibility by incorpor
 of choices. The following choices are _view restaurant menu_, _add restaurant_, _update restaurant_,
 _delete restaurant_, _add menu item_, and _remove menu item_. 
 
+Project is Complete
+
 ## Resources and Dependencies
 
 ### Programming Languages
@@ -145,7 +147,7 @@ on my source folder in the file _RestaurantController.java_ file.
    _**Update**__:
    Began working on the UI of the website and was able to have a list of restaurants displayed on the home page.
    It also includes a search bar to search for the list of restaurants displayed on the home page. Was having difficuly 
-   on creating the frontend because I didnt realize I had to have Spring running simultaneoulsy. I might make changes to the UI and add pictures of the items.  
+   on creating the frontend because I didnt realize I had to have Spring running simultaneoulsy. I might make changes to the UI and add pictures of the items.
 
 _**Update**__:
 Finish with incorporating the logic for the user to be able to choose what type of menu they would want. Will work on the UI to make it for friendly user base.
